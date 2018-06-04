@@ -12,6 +12,6 @@ cd　~/.ssh; ls -alh
 # known_host
 # authorized_keys
 
-# 实现面密码登录
+# 实现免密码登录
 ssh-copy-id  user@ip_addr
 ```
