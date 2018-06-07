@@ -25,12 +25,12 @@ cat /etc/supervisor/supervisord.conf
 
 # 手动生成配置文件 /etc/supervisor
 # 创建文件夹
-mkdir /etc/supervisor
+mkdir /etc/supervisor -p
 # 创建配置文件
 echo_supervisord_conf > /etc/supervisor/supervisord.conf
 
 # 为了不将所有新增配置信息全写在一个配置文件里，这里新建一个文件夹，每个程序设置一个配置文件，相互隔离
-mkdir /etc/supervisor/conf.d/
+mkdir /etc/supervisor/conf.d/ -p
 
 # 加入以下配置信息
 [include]
