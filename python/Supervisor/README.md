@@ -1,7 +1,9 @@
 Supervisor
 ==========
+
 安装
 --
+
 ```sh
 # ubuntu
 sudo apt-get install supervisor
@@ -9,8 +11,10 @@ sudo apt-get install supervisor
 # centos 7
 yum install supervisor.noarch
 ```
+
 使用
 --
+
 ```sh
 # 默认配置文件
 # 进入默认的配置目录
@@ -38,8 +42,10 @@ port=9001
 username=user
 password=123
 ```
+
 命令
 --
+
 ```sh
 #启动
 supervisord -c /etc/supervisor/supervisord.conf
@@ -47,15 +53,19 @@ supervisord -c /etc/supervisor/supervisord.conf
 # 关闭
 sudo unlink /tmp/supervisor.sock
 ```
+
 其他
 --
+
 ```sh
 # 查看是否使用 9001  *:9001(第4列)
 ss -anpt | grep 9001
 ```
+
 例子
 --
-```
+
+```conf
 # 配置文件 tornado 例子
 
 [program:app] ; 程序名称，在 supervisorctl 中通过这个值来对程序进行一系列的操作
@@ -72,4 +82,3 @@ stdout_logfile_backups = 20     ; stdout 日志文件备份数
 stdout_logfile = /data/logs/usercenter_stdout.log
 
 ```
-
