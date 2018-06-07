@@ -26,7 +26,7 @@ mkdir /etc/supervisor
 echo_supervisord_conf > /etc/supervisor/supervisord.conf
 
 # 为了不将所有新增配置信息全写在一个配置文件里，这里新建一个文件夹，每个程序设置一个配置文件，相互隔离
-mkdir /etc/supervisor/supervisord.d/
+mkdir /etc/supervisor/conf.d/
 
 # 加入以下配置信息
 [include]
