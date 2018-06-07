@@ -28,11 +28,11 @@ echo_supervisord_conf > /etc/supervisor/supervisord.conf
 # 为了不将所有新增配置信息全写在一个配置文件里，这里新建一个文件夹，每个程序设置一个配置文件，相互隔离
 mkdir /etc/supervisor/supervisord.d/
 
-### 加入以下配置信息
+# 加入以下配置信息
 [include]
 files = /etc/supervisor/conf.d/*.conf
 
-### 在supervisord.conf中设置通过web可以查看管理的进程，加入以下代码（默认即有，取消注释即可
+# 在supervisord.conf中设置通过web可以查看管理的进程，加入以下代码（默认即有，取消注释即可
 [inet_http_server]
 port=9001
 username=user
