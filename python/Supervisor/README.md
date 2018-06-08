@@ -37,6 +37,17 @@ files = /etc/supervisor/conf.d/*.conf
 port=9001
 username=user
 password=123
+
+# 修改配置, 创建配置需要的文件
+sudo touch /var/run/supervisor.sock
+sudo chmod 777 /var/run/supervisor.sock
+
+sudo touch /var/run/supervisor.pid
+sudo chmod 777 /var/run/supervisor.pid
+
+
+sudo touch /var/log/supervisor.log
+sudo chmod 777 /var/log/supervisor.log
 ```
 命令
 --
