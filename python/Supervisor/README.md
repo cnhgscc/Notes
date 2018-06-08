@@ -1,7 +1,9 @@
 Supervisor
 ==========
+
 安装
 --
+
 ```sh
 # ubuntu
 sudo apt-get install supervisor
@@ -9,8 +11,10 @@ sudo apt-get install supervisor
 # centos 7
 yum install supervisor.noarch
 ```
+
 使用
 --
+
 ```sh
 # 默认配置文件
 # 进入默认的配置目录
@@ -21,12 +25,12 @@ cat /etc/supervisor/supervisord.conf
 
 # 手动生成配置文件 /etc/supervisor
 # 创建文件夹
-mkdir /etc/supervisor
+mkdir /etc/supervisor -p
 # 创建配置文件
 echo_supervisord_conf > /etc/supervisor/supervisord.conf
 
 # 为了不将所有新增配置信息全写在一个配置文件里，这里新建一个文件夹，每个程序设置一个配置文件，相互隔离
-mkdir /etc/supervisor/conf.d/
+mkdir /etc/supervisor/conf.d/ -p
 
 # 加入以下配置信息
 [include]
@@ -49,8 +53,10 @@ sudo chmod 777 /var/run/supervisor.pid
 sudo touch /var/log/supervisor.log
 sudo chmod 777 /var/log/supervisor.log
 ```
+
 命令
 --
+
 ```sh
 #启动
 supervisord -c /etc/supervisor/supervisord.conf
@@ -58,15 +64,19 @@ supervisord -c /etc/supervisor/supervisord.conf
 # 关闭
 sudo unlink /tmp/supervisor.sock
 ```
+
 其他
 --
+
 ```sh
 # 查看是否使用 9001  *:9001(第4列)
 ss -anpt | grep 9001
 ```
+
 例子
 --
-```
+
+```conf
 # 配置文件 tornado 例子
 
 [program:app] ; 程序名称，在 supervisorctl 中通过这个值来对程序进行一系列的操作
@@ -83,4 +93,3 @@ stdout_logfile_backups = 20     ; stdout 日志文件备份数
 stdout_logfile = /data/logs/usercenter_stdout.log
 
 ```
-
