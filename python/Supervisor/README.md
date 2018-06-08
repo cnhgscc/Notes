@@ -58,11 +58,14 @@ sudo chmod 777 /var/log/supervisor.log
 --
 
 ```sh
-#启动
+# 启动
+# 1.谁系统的启动自动启动
 supervisord -c /etc/supervisor/supervisord.conf
+# 2.子程序的管理系统
 supervisorctl -c /etc/supervisor/supervisord.conf
-# 关闭
-sudo unlink /tmp/supervisor.sock
+
+
+sudo unlink /var/run/supervisor.sock
 ```
 
 其他
