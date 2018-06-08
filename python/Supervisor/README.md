@@ -60,7 +60,7 @@ sudo chmod 777 /var/log/supervisor.log
 ```sh
 #启动
 supervisord -c /etc/supervisor/supervisord.conf
-
+supervisorctl -c /etc/supervisor/supervisord.conf
 # 关闭
 sudo unlink /tmp/supervisor.sock
 ```
