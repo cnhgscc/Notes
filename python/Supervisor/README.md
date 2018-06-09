@@ -71,8 +71,6 @@ mkdir -p /data/logs
 supervisord -c /etc/supervisor/supervisord.conf
 # 2.子程序的管理系统
 supervisorctl -c /etc/supervisor/supervisord.conf
-
-sudo unlink /var/run/supervisor.sock
 ```
 
 其他
