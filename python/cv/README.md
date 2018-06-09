@@ -28,4 +28,7 @@
     精通linux下的python开发, 主要方向为web,爬虫相关
         精通web框架 django tornado 爬虫框架scripy scry-redis
         熟练JavaScript\css\html 进行前端开发 
-        熟练GOlang\C++\Java\R 等语言
+        熟练GOlang\C++\Java\sh\R 等语言
+
+    数据库:  mysql redis mongodb
+    编辑器:  vim pycharm vscode sublime
