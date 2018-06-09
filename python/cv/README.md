@@ -4,6 +4,8 @@
 个人信息
 ----
 
+![Image text](img/xlpic.jpeg)
+
 姓名 | 史红光 | 生日 | 1991/10/13
 -- | -- | -- | --
 性别 | 男 | 年龄 | 27
@@ -16,21 +18,13 @@
 -- | -- | -- 
 2014-8 ~ 2016-10 | 蓝港互动集团 | 平台部python开发 
 2016-12 ~ 2017-5 | 北京中清龙图有限公司 | python开发
-2017-05 ~ 2018-7 | 北京信联迅达科技有限公司 | pythonk开发工程师
+2017-05 ~ 2018-7 | 北京信联迅达科技有限公司 | python全栈开发工程师
 
 
 工作技能
 ----
 
     精通linux下的python开发, 主要方向为web,爬虫相关
-        精通web框架 django tornado
-        熟练JavaScript\css\html 进行前端开发
+        精通web框架 django tornado 爬虫框架scripy scry-redis
+        熟练JavaScript\css\html 进行前端开发 
         熟练GOlang\C++\Java\R 等语言
-
-python框架
---------
-
-> 1.web框架
- * django
- * tornado
- * flask
