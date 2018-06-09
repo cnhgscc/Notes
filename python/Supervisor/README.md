@@ -92,7 +92,6 @@ ss -anpt | grep 9001
 
 > /etc/supervisor/conf.d目录下创建tornados.conf
 ```conf
-# 
 # 配置文件 tornado 例子
 
 [group:tornados]
