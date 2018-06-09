@@ -6,14 +6,13 @@
 
 姓名 | 史红光 | 生日 | 1991/10/13
 -- | -- | -- | --
-性别 | 男 |
-学校 | 东北电力大学
-学历 | 本科
+性别 | 男 | 年龄 | 27
+学校 | 东北电力大学 | 学历 | 本科
 
 工作经历
 ----
 
-time | company | position 
+时间 | 公司名称 | 职位 
 -- | -- | -- 
 2014-8 ~ 2016-10 | 蓝港互动集团 | 平台部python开发 
 2016-12 ~ 2017-5 | 北京中清龙图有限公司 | python开发
@@ -23,20 +22,15 @@ time | company | position
 工作技能
 ----
 
-    精通linux下的python开发,熟练使用GOlang\C++\Java\等进行后端开发
-    使用JavaScript\css\html 进行前端开发
+    精通linux下的python开发, 主要方向为web,爬虫相关
+        精通web框架 django tornado
+        熟练JavaScript\css\html 进行前端开发
+        熟练GOlang\C++\Java\R 等语言
 
 python框架
 --------
 
 > 1.web框架
->> django
-
->> tornado
-
->> flask
-
-> 爬虫
->> 1.scrapy
-
->> 2.scrapy-redis
+ * django
+ * tornado
+ * flask
