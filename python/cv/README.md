@@ -20,6 +20,7 @@ time | company | position
 2016-12 ~ 2017-5 | Gryffindor | python开发
 2017-05 ~ 2018-7 | 北京信联迅达科技有限公司 | pythonk开发工程师
 
+
 工作技能
 ----
 
