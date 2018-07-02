@@ -11,7 +11,7 @@ pip install virtualenvwrapper-win　　#Windows使用该命令
 ```sh
 # ~/.bashrc
 # virtualenvwrapper存放虚拟环境目录
-export WORKON_HOME=~/Envs
+export WORKON_HOME=~/Pyenv
 # virtrualenvwrapper会安装到python的bin目录下，所以该路径是python安装目录下
 # bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper.sh
