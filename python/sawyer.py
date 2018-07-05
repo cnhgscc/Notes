@@ -2,8 +2,8 @@ import functools
 import datetime
 
 
-class LazyProperty(object):
-    """ A property that caches itself to the class object. """
+class LazyClassProperty(object):
+    """ A class property that caches itself to the class. """
 
     def __init__(self, func):
         functools.update_wrapper(self, func, updated=[])
@@ -15,28 +15,53 @@ class LazyProperty(object):
         return value
 
 
-class Properties:
-    """ a class, aotu set properties. """
+class LazyProperty(object):
+    """ A instance property that caches itself to the class object. """
 
-    is_sington = None
-    is_update_attrs = None
+    def __init__(self, func):
+        functools.update_wrapper(self, func, updated=[])
+        self.getter = func
+
+    def __get__(self, obj, cls):
+        value = self.getter(obj)
+        setattr(obj, self.__name__, value)
+        return value
+
+
+class Properties:
+    """ a class, auto set properties. """
 
     class Settings:
         author = "sawyer"
-        attrs = {}
+        default_attrs = {}
 
-    class Sington:
+        is_sington = False
+        is_update_attrs = True
+
+
+    class SingtonProxy:
 
         sing_class = None
         create_time = None
 
     def __new__(cls, *args, **kwargs):
 
+        for cls_p, cls_v in cls.Settings.__dict__.items():
+            if not hasattr(cls, cls_p):
+                setattr(cls, cls_p, cls_v)
+        else:
+            if not hasattr(cls, "default_attr"):
+                cls.default_attr = {}
+            if not hasattr(cls, "is_sington"):
+                cls.is_sington = False
+            if not hasattr(cls, "is_update_attrs"):
+                cls.is_update_attrs = True
+
         if cls.is_sington:
-            if not cls.Sington.sing_class:
-                cls.Sington.sing_class = super(Properties, cls).__new__(cls)
-                cls.Sington.create_time = datetime.datetime.now()
-            return cls.Sington.sing_class
+            if not cls.SingtonProxy.sing_class:
+                cls.SingtonProxy.sing_class = super(Properties, cls).__new__(cls)
+                cls.SingtonProxy.create_time = datetime.datetime.now()
+            return cls.SingtonProxy.sing_class
         else:
             return super(Properties, cls).__new__(cls)
 
@@ -51,7 +76,7 @@ class Properties:
             self.__dict__.setdefault(p, v)
 
     def __getattr__(self, p):
-        return self.__dict__.get(p , self.Settings.attrs.get(p, None))
+        return self.__dict__.get(p , self.default_attrs.get(p, None))
 
     def set_properties(self, **kwargs):
 
@@ -67,13 +92,23 @@ class Properties:
             return getattr(this, properties)
 
 
-class Test(Properties):
-    is_update_attrs = True
-    is_sington = True
+if __name__ == "__main__":
 
-t = Test(name="shihongguang")
+    class Test(Properties):
 
-t.name = 222
+        class Settings:
+            is_sington = True
+            is_update_attrs = False
 
-b = Test(name="shihongguang111")
-print(b.name)
+        @LazyProperty
+        def age(self):
+            return 20 + 7
+
+
+    t1 = Test(name="shihongguang")
+    t2 = Test(name="shihongguang1013")
+
+    print(t1.name)
+    print(t1.age)
+    print(t1.__class__.__dict__)
+    print(t1.__dict__)
