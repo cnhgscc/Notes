@@ -76,20 +76,20 @@ class Properties:
             self.__dict__.setdefault(p, v)
 
     def __getattr__(self, p):
-        return self.__dict__.get(p , self.default_attrs.get(p, None))
+        return self.__dict__.get(p, self.default_attrs.get(p, None))
 
     def set_properties(self, **kwargs):
 
         for p, v in kwargs.items():
             setattr(self, p, v)
 
-    def properties(this, properties=None):
+    def properties(self, properties=None):
 
         if isinstance(properties, (list, tuple)):
-            return [getattr(this, properties) for p in properties]
+            return [getattr(self, p) for p in properties]
 
         if isinstance(properties, str):
-            return getattr(this, properties)
+            return getattr(self, properties)
 
 
 if __name__ == "__main__":
