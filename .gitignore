@@ -47,8 +47,9 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
+# files:
 *.log
+.json
 
 # Sphinx documentation
 docs/_build/
@@ -58,9 +59,4 @@ target/
 
 # IDE
 .idea
-
-# Django migrations
-migrations/
-
-
-.json
+.vscode
