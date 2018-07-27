@@ -8,4 +8,5 @@ c++ / python
 1. boost
 -----
 
-examples
+1. 安装 (for ubuntu 16.04)  
+    sudo apt-get install libboost-all-dev
