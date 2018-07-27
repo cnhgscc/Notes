@@ -174,12 +174,12 @@ Pypi https://pypi.org/
 
     调优给你的代码增加复杂性. 集成其它语言之前, 请检查下面的列表. 如果你的算法是"足够好", 优化就没那么迫切了. 
 
-    1. 你做了性能测试报告吗? 
-    2. 你能减少硬盘的 I/O 访问吗? 
-    3. 你能减少网络 I/O 访问吗? 
-    4. 你能升级硬件吗? 
-    5. 你是为其它开发者编译库吗? 
-    6.你的第三方库软件是最新版吗? 
+    1.你做了性能测试报告吗?  
+    2.你能减少硬盘的 I/O 访问吗?  
+    3.你能减少网络 I/O 访问吗?  
+    4.你能升级硬件吗?  
+    5.你是为其它开发者编译库吗?  
+    6.你的第三方库软件是最新版吗?  
 
 2. 使用工具监控代码, 而不是直觉 
     速度的问题可能很微妙, 所以不要依赖于直觉. 感谢 "cprofiles" 模块, 通过简单的运行你就可以监控Python代码 “python -m cProfile myprogram.py” 
@@ -195,12 +195,12 @@ Pypi https://pypi.org/
 
     有很多为Python设计的高性能的第三方库和工具. 下面是一些有用的加速包的简短列表. 
 
-    1. NumPy: 一个开源的相当于MatLab的包 
-    2. SciPy: 另一个数值处理库 
-    3. GPULib: 使用GPUs加速代码 
-    4. PyPy: 使用 just-in-time 编译器优化Python代码 
-    5. Cython: 將Python优码转成C 
-    6. ShedSkin: 將Python代码转成C++
+    1.NumPy: 一个开源的相当于MatLab的包  
+    2.SciPy: 另一个数值处理库  
+    3.GPULib: 使用GPUs加速代码  
+    4.PyPy: 使用 just-in-time 编译器优化Python代码  
+    5.Cython: 將Python优码转成C  
+    6.ShedSkin: 將Python代码转成C++ 
 
 5. 使用multiprocessing模块实现真正的并发 
     因为GIL会序列化线程, Python中的多线程不能在多核机器和集群中加速. 因此Python提供了multiprocessing模块, 可以派生额外的进程代替线程, 跳出GIL的限制. 此外, 你也可以在外部C代码中结合该建议, 使得程序更快.  
