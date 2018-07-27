@@ -8,7 +8,7 @@ GCC 原名为 GNU C 语言编译器（GNU C Compiler），因为它原本只能�
 
 1. 编译参数简介
 
-    1.-I:增加头文件搜索路劲
+    1.-I:增加头文件搜索路径
     ```sh
         gcc -I /usr/include/python3.5m/
     ```
