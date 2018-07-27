@@ -47,5 +47,5 @@ g++
 
 GNU的c++编译器  
 
-1. cplusplus  
+1. cplusplus编译参数简介  
     --std=c++17:使用c++17进行编译
