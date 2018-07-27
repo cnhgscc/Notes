@@ -9,7 +9,7 @@ Cython
 
 把py转化成.so  
 
-1. 编译python文件, 创建setup.py
+1. 创建setup.py, 编译python文件 test.py
 
     ```python
     from distutils.core import setup
