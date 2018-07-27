@@ -143,8 +143,9 @@ Pypi https://pypi.org/
       >>>        if arg not in cache: cache['arg'] = f(*arg) 
       >>>        return cache['arg'] 
       >>>    return wrap 
-
+    ```
     也可以对 Fibonacci 函数使用装饰器: 
+    ```python
       >>> @memo 
       >>> def fib(i): 
       >>>    if i < 2: return 1 
