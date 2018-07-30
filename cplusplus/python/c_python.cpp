@@ -2,10 +2,6 @@
 
 #include <boost/python.hpp>
 
-class A{
-    public:
-        int privateVal;
-};
 
 
 BOOST_PYTHON_MODULE(test){
