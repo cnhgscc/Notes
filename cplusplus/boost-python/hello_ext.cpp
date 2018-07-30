@@ -1,6 +1,5 @@
 #include <boost/python.hpp>
 
-#include <Python.h>
 
 char const* greet()
 {
