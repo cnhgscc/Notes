@@ -12,8 +12,8 @@ inspect
     3.inspect.signature : 函数定义的参数(包含: \_\_annotations__ )  
 
 2. 判断  
-    1.inspect.isclass : 类
-    inspect.isfunction : 普通函数
+    1.inspect.isclass : 类  
+    2.inspect.isfunction : 普通函数  
 
-    inspect.ismethod: 对象的方法函数
-    inspect.isbuiltin: 对象的内建函数
+    3.inspect.ismethod: 对象的方法函数  
+    4.inspect.isbuiltin: 对象的内建函数  
