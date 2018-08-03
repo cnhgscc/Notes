@@ -87,17 +87,22 @@ class ProcessScheduler:
         while True:
 
             try:
-                task = self.rpc_queue.get(1)
+                task = self.rpc_queue.get(timeout=1)
             except Exception:
-                pass
+                time.sleep(sleep_time*3)
+                for p in self.p_list:
+                    print(p, p.is_run)
             else:
-
-                for xp in self.p_list:
-                    if not xp.is_run:
-                        xp.put(task)
-                        break
+                self.add_task(task)
 
             time.sleep(sleep_time)
+
+    def add_task(self, task):
+
+        for xp in self.p_list:
+            if not xp.is_run:
+                xp.put(task)
+                break
 
 
 if __name__ == "__main__":
