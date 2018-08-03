@@ -71,7 +71,7 @@ class ProcessScheduler:
 
     def __init__(self, pcount=None, rpc_queue=None, debug=True):
         self.pcount = pcount or multiprocessing.cpu_count()
-        self.p_list = []
+        self.pool = []
 
         self.rpc_queue = rpc_queue or []
         self.debug = debug
@@ -81,7 +81,7 @@ class ProcessScheduler:
         for i in range(self.pcount):
             pname = "Scheduler Process-{}".format(i+1)
             p = XProcess(name=pname, debug=self.debug)
-            self.p_list.append(p)
+            self.pool.append(p)
             p.start()
 
         while True:
@@ -90,7 +90,7 @@ class ProcessScheduler:
                 task = self.rpc_queue.get(timeout=1)
             except Exception:
                 time.sleep(sleep_time*3)
-                for p in self.p_list:
+                for p in self.pool:
                     print(p, p.is_run)
             else:
                 self.add_task(task)
@@ -99,7 +99,7 @@ class ProcessScheduler:
 
     def add_task(self, task):
 
-        for xp in self.p_list:
+        for xp in self.pool:
             if not xp.is_run:
                 xp.put(task)
                 break
