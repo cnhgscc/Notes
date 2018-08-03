@@ -95,11 +95,11 @@ class ProcessScheduler:
                     for p in self.pool:
                         print(p, p.is_run)
             else:
-                self.add_task(task)
+                self.append_task(task)
 
             time.sleep(sleep_time)
 
-    def add_task(self, task):
+    def append_task(self, task):
 
         for xp in self.pool:
             if not xp.is_run:
