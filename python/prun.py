@@ -89,7 +89,8 @@ class ProcessScheduler:
             try:
                 task = self.rpc_queue.get(timeout=1)
             except Exception:
-                time.sleep(sleep_time*3)
+                time.sleep(sleep_time*4)
+                print("ProcessScheduler Stats: \n count:{}".format(len(self.pool)))
                 for p in self.pool:
                     print(p, p.is_run)
             else:
