@@ -1,13 +1,13 @@
 JavaScript
 ==========
 
-1. 常见的数据类型, 前3个可以作为类型转换函数  
-    1. String  
-    2. Number  
-    3. Boolean  
-    4. Array  
-    5. Object  
-    6. Undefined
+1. 常见的数据类型, 前3个可以作为类型转换函数
+    String  
+    Number  
+    Boolean  
+    Array  
+    Object  
+    Undefined
 
     ```javascript
     // 创建一个对象与python中字典的区别
