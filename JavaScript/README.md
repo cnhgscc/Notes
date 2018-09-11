@@ -32,7 +32,7 @@ JavaScript
     }
 
     // ES6增加了默认参数和剩余参数
-    // 函数中剩余参数与python中的写法区别
+    // 函数中剩余参数与python中的写法区别
 
     function test(name="aquarius", ...args){
         // 函数体内，如果两行语句没有写在一行，不需要加分号
