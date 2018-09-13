@@ -91,16 +91,16 @@ JavaScript
     ```javascript
     // JSON
     // parse方法，将jsonstr转化为jsobj
+
     JSON.parse()
     // stringify方法，将jsobj转化成jsonstr
+
     JSON.stringify()
     ```
+5. 常用函数
 
+    ```js
+    // 转化成url编码
 
-转码
---
-
-```js
-// 转化成url编码
-let uri = encodeURIComponent("aquarius")
-```
+    let uri = encodeURIComponent("aquarius")
+    ```
