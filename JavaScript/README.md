@@ -86,6 +86,15 @@ JavaScript
         console.log(p)
     }
     ```
+4. JSON对象
+
+    ```javascript
+    // JSON
+    // parse方法，将jsonstr转化为jsobj
+    JSON.parse()
+    // stringify方法，将jsobj转化成jsonstr
+    JSON.stringify()
+    ```
 
 
 转码
