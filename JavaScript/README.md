@@ -97,7 +97,13 @@ JavaScript
 
     JSON.stringify()
     ```
-5. 常用函数
+5. 数组排序
+    ```javascript
+    array = [2, 4, 1, 0, 9, 5]
+    array.sort(function(a, b){return b - a})
+    ```
+
+6. 常用函数
 
     ```js
     // 转化成url编码
