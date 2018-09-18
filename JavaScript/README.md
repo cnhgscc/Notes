@@ -41,6 +41,24 @@ JavaScript
         console.log(...args)
     }
 
+    // 动态获取函数的参数,使用函数的arguments数组对象
+    // arguments 为函数参数的一个数组, 可以用位置获取传入的参数, 不需要在创建函数就指定函数参数的名称
+    // 下面是使用arguments的一个例子
+
+    $shelper = {
+        GetProperty: function(){
+            var obj = arguments[0] || Object()
+            var p = arguments[1] || ""
+            var defaultValue = arguments[2] || ""
+            return obj[p] || defaultValue
+        },
+        Math: {
+            DF2Percent: function(a, b){
+                return (a/b*100).toFixed((arguments[2] || 2)) + (arguments[3] || '%')
+            }
+        }
+    }
+
     ```
 
 2. 类型查询使用typeof关键字，区分Array与Object使用instanceof  
