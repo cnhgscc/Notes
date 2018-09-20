@@ -1,6 +1,7 @@
 import instpect
 
-def iprint(iobj):
+
+def iprintf(iobj):
 
     properties = []
     method = []
