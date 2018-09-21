@@ -22,11 +22,3 @@ webfreamwork
 
 vibora
 
-{
-    "server":"127.0.0.1",
-    "server_port":8388,
-    "local_port":1080,
-    "password":"EnbodMag",
-    "timeout":60,
-    "method":"chacha20-ietf-poly1305"
-}
