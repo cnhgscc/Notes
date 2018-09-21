@@ -53,6 +53,17 @@ cd wrk
 make
 ln wrk /usr/local/bin
 
+# openvpn
+# doc https://www.cnblogs.com/huangweimin/articles/7638943.html
+sudo apt install openvpn
+sudo apt install  easy-rsa
+
+dpkg -L easy-rsa
+
+
+# python pip
+sudo apt-get install python3-dev libmysqlclient-dev
+pip install mysqlclient
 ```
 
 1.修改git权限  
