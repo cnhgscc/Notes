@@ -25,6 +25,8 @@ mv pycharm_software lib_software
 # db
 # mariadb
 sudo apt install mariadb-server
+# MySQL Workbench - a visual database modeling, administration and queuing tool
+sudo apt install mysql-workbench
 
 # sudo mysql
 # set password
