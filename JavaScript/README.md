@@ -121,7 +121,14 @@ JavaScript
     array.sort(function(a, b){return b - a})
     ```
 
-6. 常用函数
+6. 延时操作  
+	```javascript
+	
+	setTimeout(function(){}, 3000)
+
+	```
+
+7. 常用函数
 
     ```js
     // 转化成url编码
