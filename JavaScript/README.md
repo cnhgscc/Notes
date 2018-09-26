@@ -1,6 +1,10 @@
 JavaScript
 ==========
 
+
+https://caniuse.com/
+
+
 1. 常见的数据类型, 前3个可以作为类型转换函数  
     String  
     Number  
