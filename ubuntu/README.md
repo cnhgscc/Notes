@@ -66,6 +66,10 @@ dpkg -L easy-rsa
 # python pip
 sudo apt-get install python3-dev libmysqlclient-dev
 pip install mysqlclient
+
+# jdk 1.8
+sudo apt install openjdk-8-jdk
+
 ```
 
 1.修改git权限  
