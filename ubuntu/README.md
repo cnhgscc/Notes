@@ -75,3 +75,7 @@ sudo apt install openjdk-8-jdk
 1.修改git权限  
 
      sudo chown -R shihongguang:shihongguang .git
+
+2.权限  
+	1-执行 2-写 3-读
+
