@@ -4,6 +4,7 @@ Notes
 1.在线手册 http://shouce.jb51.net/  
 2.Python中文社区 https://www.pythontab.com/
 3.程序员手册大全 http://manual.51yip.com/
+4.linux http://linux.51yip.com
 
 
 高数
