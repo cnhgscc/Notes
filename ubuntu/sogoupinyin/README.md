@@ -1,5 +1,4 @@
-## ubuntu 18.04 install sogoupinyin
-### 2018-12-29
+## ubuntu 18.04 ->  sogoupinyin
 
 ```sh
 # ubuntu 18.04
