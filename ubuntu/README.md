@@ -70,6 +70,9 @@ pip install mysqlclient
 # jdk 1.8
 sudo apt install openjdk-8-jdk
 
+# .bashrc
+PATH=$PATH:$HOME
+
 ```
 
 1.修改git权限  

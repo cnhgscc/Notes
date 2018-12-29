@@ -1,6 +1,9 @@
 # git
 
 ```sh
+# init
+git init –bare
+
 # create branch
 git checkout -b dev
 
