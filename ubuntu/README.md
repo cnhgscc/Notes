@@ -75,6 +75,27 @@ PATH=$PATH:$HOME
 
 ```
 
+## .bashrc
+
+```sh
+
+# virtualenvwrapper settings
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+
+alias quit='deactivate'
+
+# cmd
+alias xgunicorn='gunicorn -w 4 -k gevent -b '
+alias xnetstat='sudo netstat -anpt | grep -w LISTEN | grep -w tcp'
+alias xps='ps -ef | grep '
+
+# curl
+alias jpost='curl -X POST -H "Content-Type: application/json"'
+alias jput='curl -X PUT -H "Content-Type: application/json"'
+
+```
+
 1.修改git权限  
 
      sudo chown -R shihongguang:shihongguang .git
