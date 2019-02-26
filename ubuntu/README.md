@@ -85,10 +85,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 alias quit='deactivate'
 
-# cmd
+# cmdline
 alias xgunicorn='gunicorn -w 4 -k gevent -b '
+
 alias xnetstat='sudo netstat -anpt | grep -w LISTEN | grep -w tcp'
 alias xps='ps -ef | grep '
+
+alias xwrk='wrk -c1000 -t8 -d5s --latency '
 
 # curl
 alias jpost='curl -X POST -H "Content-Type: application/json"'
