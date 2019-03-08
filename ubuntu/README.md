@@ -150,6 +150,24 @@ docker --version
 
 ```
 
+3.docker
+--------
+
+    https://registry.docker-cn.com
+    http://hub-mirror.c.163.com
+    https://docker.mirrors.ustc.edu.cn
+    
+    # /etc/docker/daemon.json 
+
+    {
+        "registry-mirrors": [" http://hub-mirror.c.163.com"],
+        "insecure-registries": []
+    }
+    
+    
+}
+
+
 ## .bashrc
 
 ```sh
