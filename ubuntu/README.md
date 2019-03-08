@@ -1,5 +1,34 @@
 # Ubuntu 18.04.1 LTS
 
+1.更新源改为国内的更新源  
+---------------------
+
+文件/etc/apt/sources.list 内容替换 
+    
+```
+#deb cdrom:[Ubuntu 18.04.1 LTS _Bionic Beaver_ - Release amd64 (20180725)]/ bionic main restricted  
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+```
+
+```sh
+# 更新
+sudo apt update
+sudo apt upgrade
+```
+
+2.常用软件与设置
+--------------
+
 ```sh
 # see system info
 cat /etc/os-release
@@ -73,6 +102,52 @@ sudo apt install openjdk-8-jdk
 # .bashrc
 PATH=$PATH:$HOME
 
+# Snap是Ubuntu母公司Canonical于2016年4月发布Ubuntu16.04时候引入的一种安全的、易于管理的、沙盒化的软件包格式，
+# 与传统的dpkg/apt有着很大的区别
+# Snap可以让开发者将他们的软件更新包随时发布给用户，而不必等待发行版的更新周期；
+# 其次Snap应用可以同时安装多个版本的软件，比如安装Python2.7和Python3.3。
+# 可以通过edge通道进行安装，也可以通过GTK+3、Qt frameworks、stable等通道进行安装需要的软件 
+# 默认情况下，是通过stable的通道进行安装的
+
+# 常用的使用方法
+# 查询已经安装了的软件
+sudo snap list
+
+# 搜索要安装的Snap软件包
+sudo snap find xxxx
+
+# 查看Snap软件的更多信息
+sudo snap info xxxx
+
+# 安装Snap软件包
+sudo snap install xxxx
+
+# 更换软件安装通道
+sudo snap switch –channel=xxxx xxxx
+
+# 更新Snap软件包
+sudo snap refresh xxxx
+
+# 还原到之前版本
+sudo snap revert xxxx
+
+# 卸载Snap软件
+sudo snap remove xxxx
+
+
+# 软件管道切换
+snap switch–channel=candidate vlc
+snap refresh
+
+
+# docker 安装例子
+snap find docker
+snap info docker
+sudo snap install docker -stable
+
+# docker 版本查看
+docker --version
+
 ```
 
 ## .bashrc
@@ -98,6 +173,7 @@ alias jpost='curl -X POST -H "Content-Type: application/json"'
 alias jput='curl -X PUT -H "Content-Type: application/json"'
 
 ```
+
 
 1.修改git权限  
 
