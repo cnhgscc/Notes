@@ -87,3 +87,4 @@ MyISAM 与 InnoDB
     10. 进行架构级别的缓存，静态化和分布式；
     11. 不采用全文索引；
     12. 采用更快的存储方式，例如 NoSQL存储经常访问的数据
+    cur = conn.cursor(cursor=pymysql.cursors.DictCursor)

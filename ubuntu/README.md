@@ -164,7 +164,16 @@ docker --version
         "insecure-registries": []
     }
     
-    
+    # 修改启动文件
+    # /lib/systemd/system/docker.service
+    # 启动增加配置文件引用
+    ExecStart=/usr/bin/dockerd -H fd:// --config-file /etc/docker/daemon.json
+   
+    sudo groupadd docker     #添加docker用户组
+    sudo gpasswd -a $USER docker     #将登陆用户加入到docker用户组中
+    newgrp docker     #更新用户组
+    docker ps    #测试docker命令是否可以使用sudo正常使用
+   
 }
 
 
