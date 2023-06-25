@@ -12,6 +12,9 @@ scoop config home D:\scoop
 scoop search zig
 # 安装软件 
 scoop install zig
+# zig
+scoop bucket add versions
+scoop install versions/zig-dev
 
 # 增加桶列表中
 scoop bucket add extras
