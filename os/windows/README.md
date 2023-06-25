@@ -15,6 +15,8 @@ scoop install zig
 # zig
 scoop bucket add versions
 scoop install versions/zig-dev
+scoop list zig
+scoop reset zig
 
 # 增加桶列表中
 scoop bucket add extras
